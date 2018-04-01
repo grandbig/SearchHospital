@@ -14,6 +14,9 @@
 		2ED7164F20707DF900AB9F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7164D20707DF900AB9F87 /* LaunchScreen.storyboard */; };
 		2ED7165A20707DF900AB9F87 /* SearchHospitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7165920707DF900AB9F87 /* SearchHospitalTests.swift */; };
 		2ED7166520707DF900AB9F87 /* SearchHospitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7166420707DF900AB9F87 /* SearchHospitalUITests.swift */; };
+		C3A693147A0575C9ECE238ED /* Pods_SearchHospital_Tests_SearchHospitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */; };
+		C3C5CC6FA64200868D8932BE /* Pods_SearchHospital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DE061E1E03BDA7506B4056 /* Pods_SearchHospital.framework */; };
+		C48786F1D1A65557EB4A0750 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B5B283C7685D65EBDD3344 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164120707DF800AB9F87 /* SearchHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164420707DF800AB9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ED7164620707DF800AB9F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		2ED7166020707DF900AB9F87 /* SearchHospitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchHospitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7166420707DF900AB9F87 /* SearchHospitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHospitalUITests.swift; sourceTree = "<group>"; };
 		2ED7166620707DF900AB9F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36B5B283C7685D65EBDD3344 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF5F6E42611D44B1372A565 /* Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6CE3A471C7E0CC0ED2AEC7CB /* Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B77CEA6D4B6C5A5BB92C1FF /* Pods-SearchHospital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital.release.xcconfig"; sourceTree = "<group>"; };
+		8121320BD869358FEF3D4A34 /* Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B024837FBB7E5FAD0245D874 /* Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4DBD6B09D197F6E2DDC3D2C /* Pods-SearchHospital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital.debug.xcconfig"; sourceTree = "<group>"; };
+		C2DE061E1E03BDA7506B4056 /* Pods_SearchHospital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C5CC6FA64200868D8932BE /* Pods_SearchHospital.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A693147A0575C9ECE238ED /* Pods_SearchHospital_Tests_SearchHospitalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48786F1D1A65557EB4A0750 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				2ED7165820707DF900AB9F87 /* SearchHospitalTests */,
 				2ED7166320707DF900AB9F87 /* SearchHospitalUITests */,
 				2ED7164220707DF800AB9F87 /* Products */,
+				F8E7435849F5C9D4138D8837 /* Pods */,
+				FC784408EFA3C56137200C33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = SearchHospitalUITests;
 			sourceTree = "<group>";
 		};
+		F8E7435849F5C9D4138D8837 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBD6B09D197F6E2DDC3D2C /* Pods-SearchHospital.debug.xcconfig */,
+				7B77CEA6D4B6C5A5BB92C1FF /* Pods-SearchHospital.release.xcconfig */,
+				B024837FBB7E5FAD0245D874 /* Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig */,
+				6CE3A471C7E0CC0ED2AEC7CB /* Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig */,
+				8121320BD869358FEF3D4A34 /* Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig */,
+				6BF5F6E42611D44B1372A565 /* Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC784408EFA3C56137200C33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE061E1E03BDA7506B4056 /* Pods_SearchHospital.framework */,
+				217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */,
+				36B5B283C7685D65EBDD3344 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ED7166920707DF900AB9F87 /* Build configuration list for PBXNativeTarget "SearchHospital" */;
 			buildPhases = (
+				CEE01E7B463CC045F603C6B0 /* [CP] Check Pods Manifest.lock */,
 				2ED7163D20707DF800AB9F87 /* Sources */,
 				2ED7163E20707DF800AB9F87 /* Frameworks */,
 				2ED7163F20707DF800AB9F87 /* Resources */,
+				F8129EE372F6A53768F14519 /* [CP] Embed Pods Frameworks */,
+				50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ED7166C20707DF900AB9F87 /* Build configuration list for PBXNativeTarget "SearchHospitalTests" */;
 			buildPhases = (
+				517DE1B78755DA6B6AE3448D /* [CP] Check Pods Manifest.lock */,
 				2ED7165120707DF900AB9F87 /* Sources */,
 				2ED7165220707DF900AB9F87 /* Frameworks */,
 				2ED7165320707DF900AB9F87 /* Resources */,
+				D6DF6417BC605BD827CCE5F8 /* [CP] Embed Pods Frameworks */,
+				FEDF4A54F8DC6ED9B4F2F86F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ED7166F20707DF900AB9F87 /* Build configuration list for PBXNativeTarget "SearchHospitalUITests" */;
 			buildPhases = (
+				805B89EF6D5AD425AB3598AE /* [CP] Check Pods Manifest.lock */,
 				2ED7165C20707DF900AB9F87 /* Sources */,
 				2ED7165D20707DF900AB9F87 /* Frameworks */,
 				2ED7165E20707DF900AB9F87 /* Resources */,
+				2902CF7EA6D17BF12F1AB2CB /* [CP] Embed Pods Frameworks */,
+				57919FB70F1A0A130C634071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +299,195 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2902CF7EA6D17BF12F1AB2CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517DE1B78755DA6B6AE3448D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SearchHospital-Tests-SearchHospitalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57919FB70F1A0A130C634071 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		805B89EF6D5AD425AB3598AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SearchHospital-Tests-SearchHospitalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE01E7B463CC045F603C6B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SearchHospital-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DF6417BC605BD827CCE5F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8129EE372F6A53768F14519 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEDF4A54F8DC6ED9B4F2F86F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2ED7163D20707DF800AB9F87 /* Sources */ = {
@@ -428,15 +666,13 @@
 		};
 		2ED7166A20707DF900AB9F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4DBD6B09D197F6E2DDC3D2C /* Pods-SearchHospital.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +682,13 @@
 		};
 		2ED7166B20707DF900AB9F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B77CEA6D4B6C5A5BB92C1FF /* Pods-SearchHospital.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,17 +698,14 @@
 		};
 		2ED7166D20707DF900AB9F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B024837FBB7E5FAD0245D874 /* Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +716,14 @@
 		};
 		2ED7166E20707DF900AB9F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CE3A471C7E0CC0ED2AEC7CB /* Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +734,13 @@
 		};
 		2ED7167020707DF900AB9F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8121320BD869358FEF3D4A34 /* Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +751,13 @@
 		};
 		2ED7167120707DF900AB9F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BF5F6E42611D44B1372A565 /* Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
