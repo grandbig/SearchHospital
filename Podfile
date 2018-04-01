@@ -6,6 +6,7 @@ target "SearchHospital" do
   # Normal libraries
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
   pod 'Moya'
   pod 'SwiftyJSON'
 
