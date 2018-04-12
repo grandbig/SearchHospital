@@ -15,6 +15,9 @@ PODS:
   - Moya/Core (10.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - Result (3.2.4)
   - SwiftyJSON (4.0.0)
 
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - Moya
+  - R.swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -31,9 +35,11 @@ SPEC CHECKSUMS:
   GooglePlacePicker: 1573e644ab54564d95c2643edc0f29091609e966
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   Moya: 9e621707ff754eeb51ff3ec51a3d54e517c0733a
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: e7fe33ee35ff4f055a8eb9c1bed33c218346f4e9
+PODFILE CHECKSUM: 03810a0b80a1cb8842421a472adc04534cca30ca
 
 COCOAPODS: 1.4.0

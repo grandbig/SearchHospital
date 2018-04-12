@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5410FE207FAA0600DB6417 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410FD207FAA0600DB6417 /* R.generated.swift */; };
 		2EC334B12070859C00ABA45B /* key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC334B02070859C00ABA45B /* key.plist */; };
 		2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164420707DF800AB9F87 /* AppDelegate.swift */; };
 		2ED7164720707DF800AB9F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164620707DF800AB9F87 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5410FD207FAA0600DB6417 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		2EC334B02070859C00ABA45B /* key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = key.plist; sourceTree = "<group>"; };
 		2ED7164120707DF800AB9F87 /* SearchHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164420707DF800AB9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				2E5410EA207EF09100DB6417 /* Workers */,
 				2ED7164420707DF800AB9F87 /* AppDelegate.swift */,
 				2ED7164620707DF800AB9F87 /* ViewController.swift */,
+				2E5410FD207FAA0600DB6417 /* R.generated.swift */,
 				2ED7164820707DF800AB9F87 /* Main.storyboard */,
 				2ED7164B20707DF900AB9F87 /* Assets.xcassets */,
 				2ED7164D20707DF900AB9F87 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				F8129EE372F6A53768F14519 /* [CP] Embed Pods Frameworks */,
 				50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */,
 				2E5410FB207F9CCD00DB6417 /* ShellScript */,
+				2E5410FC207FA81500DB6417 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -355,6 +359,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -362,6 +367,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -382,6 +388,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		2E5410FC207FA81500DB6417 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -490,6 +509,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -497,6 +517,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -514,6 +535,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -521,6 +543,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -560,6 +583,7 @@
 			files = (
 				2ED7164720707DF800AB9F87 /* ViewController.swift in Sources */,
 				2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */,
+				2E5410FE207FAA0600DB6417 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +756,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4DBD6B09D197F6E2DDC3D2C /* Pods-SearchHospital.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
@@ -751,6 +776,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B77CEA6D4B6C5A5BB92C1FF /* Pods-SearchHospital.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
@@ -770,7 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B024837FBB7E5FAD0245D874 /* Pods-SearchHospital-Tests-SearchHospitalTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
@@ -792,7 +818,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CE3A471C7E0CC0ED2AEC7CB /* Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
@@ -814,7 +840,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8121320BD869358FEF3D4A34 /* Pods-SearchHospital-Tests-SearchHospitalUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
@@ -835,7 +861,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6BF5F6E42611D44B1372A565 /* Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
