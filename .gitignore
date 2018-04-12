@@ -24,6 +24,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 SearchHospital/key.plist
+*.generated.swift
 
 ## Obj-C/Swift specific
 *.hmap

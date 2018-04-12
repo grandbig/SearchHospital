@@ -1,0 +1,111 @@
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 4.5.1
+
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 4.5.1
+
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 4.5.1
+
+name: GoogleMaps, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GoogleMaps, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GoogleMaps, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlacePicker, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlacePicker, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlacePicker, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlaces, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlaces, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: GooglePlaces, nameSpecified: 
+body: Copyright 2017 Googl…
+version: 2.5.0
+
+name: Moya, nameSpecified: 
+body: The MIT License (MIT…
+version: 10.0.1
+
+name: Moya, nameSpecified: 
+body: The MIT License (MIT…
+version: 10.0.1
+
+name: Moya, nameSpecified: 
+body: The MIT License (MIT…
+version: 10.0.1
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: Result, nameSpecified: 
+body: The MIT License (MIT…
+version: 3.2.4
+
+name: Result, nameSpecified: 
+body: The MIT License (MIT…
+version: 3.2.4
+
+name: Result, nameSpecified: 
+body: The MIT License (MIT…
+version: 3.2.4
+
+name: SwiftyJSON, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: SwiftyJSON, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: SwiftyJSON, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3
