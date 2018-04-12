@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5410F5207F942800DB6417 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410EF207F942800DB6417 /* MapPresenter.swift */; };
+		2E5410F6207F942800DB6417 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F0207F942800DB6417 /* MapRouter.swift */; };
+		2E5410F7207F942800DB6417 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F1207F942800DB6417 /* MapViewController.swift */; };
+		2E5410F8207F942800DB6417 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F2207F942800DB6417 /* MapInteractor.swift */; };
+		2E5410F9207F942800DB6417 /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F3207F942800DB6417 /* MapModels.swift */; };
+		2E5410FA207F942800DB6417 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F4207F942800DB6417 /* MapWorker.swift */; };
 		2EC334B12070859C00ABA45B /* key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC334B02070859C00ABA45B /* key.plist */; };
 		2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164420707DF800AB9F87 /* AppDelegate.swift */; };
 		2ED7164720707DF800AB9F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164620707DF800AB9F87 /* ViewController.swift */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5410EF207F942800DB6417 /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		2E5410F0207F942800DB6417 /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		2E5410F1207F942800DB6417 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2E5410F2207F942800DB6417 /* MapInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		2E5410F3207F942800DB6417 /* MapModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
+		2E5410F4207F942800DB6417 /* MapWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 		2EC334B02070859C00ABA45B /* key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = key.plist; sourceTree = "<group>"; };
 		2ED7164120707DF800AB9F87 /* SearchHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164420707DF800AB9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +120,7 @@
 		2E5410EB207EF09800DB6417 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2E5410EE207F93D400DB6417 /* Map */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -124,6 +137,19 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E5410EE207F93D400DB6417 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				2E5410F2207F942800DB6417 /* MapInteractor.swift */,
+				2E5410F3207F942800DB6417 /* MapModels.swift */,
+				2E5410EF207F942800DB6417 /* MapPresenter.swift */,
+				2E5410F0207F942800DB6417 /* MapRouter.swift */,
+				2E5410F1207F942800DB6417 /* MapViewController.swift */,
+				2E5410F4207F942800DB6417 /* MapWorker.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		2ED7163820707DF800AB9F87 = {
@@ -545,7 +571,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED7164720707DF800AB9F87 /* ViewController.swift in Sources */,
+				2E5410F6207F942800DB6417 /* MapRouter.swift in Sources */,
+				2E5410FA207F942800DB6417 /* MapWorker.swift in Sources */,
+				2E5410F9207F942800DB6417 /* MapModels.swift in Sources */,
 				2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */,
+				2E5410F8207F942800DB6417 /* MapInteractor.swift in Sources */,
+				2E5410F7207F942800DB6417 /* MapViewController.swift in Sources */,
+				2E5410F5207F942800DB6417 /* MapPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
