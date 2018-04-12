@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC334B12070859C00ABA45B /* key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC334B02070859C00ABA45B /* key.plist */; };
 		2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164420707DF800AB9F87 /* AppDelegate.swift */; };
 		2ED7164720707DF800AB9F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164620707DF800AB9F87 /* ViewController.swift */; };
 		2ED7164A20707DF800AB9F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7164820707DF800AB9F87 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC334B02070859C00ABA45B /* key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = key.plist; sourceTree = "<group>"; };
 		2ED7164120707DF800AB9F87 /* SearchHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164420707DF800AB9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ED7164620707DF800AB9F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E5410E9207EF08A00DB6417 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2E5410EA207EF09100DB6417 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2E5410EB207EF09800DB6417 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2E5410EC207EF0A100DB6417 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E5410ED207EF0A600DB6417 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2ED7163820707DF800AB9F87 = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +151,18 @@
 		2ED7164320707DF800AB9F87 /* SearchHospital */ = {
 			isa = PBXGroup;
 			children = (
+				2E5410ED207EF0A600DB6417 /* Models */,
+				2E5410EB207EF09800DB6417 /* Scenes */,
+				2E5410E9207EF08A00DB6417 /* Services */,
+				2E5410EC207EF0A100DB6417 /* Views */,
+				2E5410EA207EF09100DB6417 /* Workers */,
 				2ED7164420707DF800AB9F87 /* AppDelegate.swift */,
 				2ED7164620707DF800AB9F87 /* ViewController.swift */,
 				2ED7164820707DF800AB9F87 /* Main.storyboard */,
 				2ED7164B20707DF900AB9F87 /* Assets.xcassets */,
 				2ED7164D20707DF900AB9F87 /* LaunchScreen.storyboard */,
 				2ED7165020707DF900AB9F87 /* Info.plist */,
+				2EC334B02070859C00ABA45B /* key.plist */,
 			);
 			path = SearchHospital;
 			sourceTree = "<group>";
@@ -278,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC334B12070859C00ABA45B /* key.plist in Resources */,
 				2ED7164F20707DF900AB9F87 /* LaunchScreen.storyboard in Resources */,
 				2ED7164C20707DF900AB9F87 /* Assets.xcassets in Resources */,
 				2ED7164A20707DF800AB9F87 /* Main.storyboard in Resources */,
@@ -678,7 +722,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -694,7 +741,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -711,7 +761,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -729,7 +783,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -746,7 +804,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -763,7 +825,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4XG67E62;
 				INFOPLIST_FILE = SearchHospitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kato.SearchHospitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
