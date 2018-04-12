@@ -1,0 +1,27 @@
+disabled_rules:
+# コードの記載のない改行を許可したい
+- trailing_whitespace
+# ネスト1つで怒られるのでDisableにしたい
+- nesting
+
+- force_cast
+
+# 追加したOSSライブラリは対象に含めたくない
+excluded:
+- Pods/
+- Podfile
+- Podfile.lock
+- SearchHospitalTests/
+- SearchHospitalUITests/
+
+# 1行あたりの文字数制限を150に変更
+line_length: 150
+
+# 変数名の長さのMAXとMINを変更
+variable_name:
+  max_length:
+    warning: 60
+    error: 80
+  min_length:
+    warning: 1
+    error: 0

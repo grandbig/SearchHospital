@@ -221,6 +221,7 @@
 				2ED7163F20707DF800AB9F87 /* Resources */,
 				F8129EE372F6A53768F14519 /* [CP] Embed Pods Frameworks */,
 				50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */,
+				2E5410FB207F9CCD00DB6417 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +369,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2E5410FB207F9CCD00DB6417 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		50B2BF1E033FD2A5A360ACA7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
