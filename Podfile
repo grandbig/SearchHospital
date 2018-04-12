@@ -9,6 +9,7 @@ target "SearchHospital" do
   pod 'GooglePlacePicker'
   pod 'Moya'
   pod 'SwiftyJSON'
+  pod 'R.swift'
 
   abstract_target 'Tests' do
     target "SearchHospitalTests"
