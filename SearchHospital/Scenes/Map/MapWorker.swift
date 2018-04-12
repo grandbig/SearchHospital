@@ -12,9 +12,7 @@
 
 import UIKit
 
-class MapWorker
-{
-  func doSomeWork()
-  {
+class MapWorker {
+  func doSomeWork() {
   }
 }

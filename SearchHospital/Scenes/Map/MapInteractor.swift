@@ -12,26 +12,22 @@
 
 import UIKit
 
-protocol MapBusinessLogic
-{
+protocol MapBusinessLogic {
   func doSomething(request: Map.Something.Request)
 }
 
-protocol MapDataStore
-{
+protocol MapDataStore {
   //var name: String { get set }
 }
 
-class MapInteractor: MapBusinessLogic, MapDataStore
-{
+class MapInteractor: MapBusinessLogic, MapDataStore {
   var presenter: MapPresentationLogic?
   var worker: MapWorker?
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: Map.Something.Request)
-  {
+  func doSomething(request: Map.Something.Request) {
     worker = MapWorker()
     worker?.doSomeWork()
     

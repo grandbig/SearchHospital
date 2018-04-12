@@ -13,6 +13,7 @@ excluded:
 - Podfile.lock
 - SearchHospitalTests/
 - SearchHospitalUITests/
+- R.generated.swift
 
 # 1行あたりの文字数制限を150に変更
 line_length: 150

@@ -12,18 +12,15 @@
 
 import UIKit
 
-@objc protocol MapRoutingLogic
-{
+@objc protocol MapRoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol MapDataPassing
-{
+protocol MapDataPassing {
   var dataStore: MapDataStore? { get }
 }
 
-class MapRouter: NSObject, MapRoutingLogic, MapDataPassing
-{
+class MapRouter: NSObject, MapRoutingLogic, MapDataPassing {
   weak var viewController: MapViewController?
   var dataStore: MapDataStore?
   
