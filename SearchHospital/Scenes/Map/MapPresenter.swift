@@ -1,5 +1,5 @@
 //
-//  MapPresenter
+//  MapPresenter.swift
 //  SearchHospital
 //
 //  Created by Takahiro Kato on 2018/04/12.
@@ -12,17 +12,30 @@
 
 import UIKit
 
+enum MapInitializeState {
+    case unInitialized(latitude: Double, longitude: Double, zoomLevel: Float)
+    case initialized
+}
+
 protocol MapPresentationLogic {
-  func presentSomething(response: Map.Something.Response)
+    func presentInitialize(response: Map.Initialize.Response)
 }
 
 class MapPresenter: MapPresentationLogic {
-  weak var viewController: MapDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: Map.Something.Response) {
-    let viewModel = Map.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: MapDisplayLogic?
+    
+    // MARK: Initialize
+    func presentInitialize(response: Map.Initialize.Response) {
+        var viewModel: Map.Initialize.ViewModel!
+
+        if response.isShowUserPosition {
+            viewModel = Map.Initialize.ViewModel(state: .initialized)
+        } else {
+            let state = MapInitializeState.unInitialized(latitude: response.latitude,
+                                                         longitude: response.longitude,
+                                                         zoomLevel: 16.0)
+            viewModel = Map.Initialize.ViewModel(state: state)
+        }
+        viewController?.displayInitialize(viewModel: viewModel)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  MapViewController
+//  MapViewController.swift
 //  SearchHospital
 //
 //  Created by Takahiro Kato on 2018/04/12.
@@ -11,70 +11,135 @@
 //
 
 import UIKit
+import GoogleMaps
 
 protocol MapDisplayLogic: class {
-  func displaySomething(viewModel: Map.Something.ViewModel)
+  func displayInitialize(viewModel: Map.Initialize.ViewModel)
 }
 
 class MapViewController: UIViewController, MapDisplayLogic {
-  var interactor: MapBusinessLogic?
-  var router: (NSObjectProtocol & MapRoutingLogic & MapDataPassing)?
+    // MARK: - IBOutlets
+    @IBOutlet private weak var mapView: GMSMapView!
 
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup() {
-    let viewController = self
-    let interactor = MapInteractor()
-    let presenter = MapPresenter()
-    let router = MapRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    // MARK: - Properties
+    var interactor: MapBusinessLogic?
+    var router: (NSObjectProtocol & MapRoutingLogic & MapDataPassing)?
+    /// 位置情報マネージャ
+    internal var locationManager: CLLocationManager?
+
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
   
-  // MARK: View lifecycle
+    // MARK: Setup
+    private func setup() {
+        let viewController = self
+        let interactor = MapInteractor()
+        let presenter = MapPresenter()
+        let router = MapRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+
+    // MARK: Configure
+    /// GoogleMapの初期化
+    func configureMapView() {
+        mapView.isMyLocationEnabled = true
+        mapView.mapType = GMSMapViewType.normal
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
+        mapView.settings.compassButton = true
+        mapView.delegate = self
+    }
+
+    /// 位置情報サービスの初期化
+    func configureLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startUpdatingLocation()
+        locationManager?.delegate = self
+    }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething() {
-    let request = Map.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Map.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
+    // MARK: Routing
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureMapView()
+        configureLocationManager()
+    }
+    
+    // MARK: Initialize
+    func initialize(latitude: Double, longitude: Double) {
+        let request = Map.Initialize.Request(latitude: latitude, longitude: longitude)
+        interactor?.initialize(request: request)
+    }
+}
+
+extension MapViewController {
+
+    func displayInitialize(viewModel: Map.Initialize.ViewModel) {
+        switch viewModel.state {
+        case let .unInitialized(latitude, longitude, zoomLevel):
+            // 初期描画時のマップ中心位置の移動
+            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: zoomLevel)
+            mapView.camera = camera
+        default:
+            break
+        }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension MapViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            break
+        case .restricted, .denied:
+            break
+        case .authorizedWhenInUse:
+            break
+        default:
+            break
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let coordinate = locations.last?.coordinate {
+            initialize(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    }
+}
+
+// MARK: - GMSMapViewDelegate
+extension MapViewController: GMSMapViewDelegate {
+    
 }

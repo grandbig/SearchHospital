@@ -1,5 +1,5 @@
 //
-//  MapModels
+//  MapModels.swift
 //  SearchHospital
 //
 //  Created by Takahiro Kato on 2018/04/12.
@@ -13,14 +13,21 @@
 import UIKit
 
 enum Map {
-  // MARK: Use cases
-  
-  enum Something {
-    struct Request {
+    // MARK: Use cases
+    
+    // MARK: 初期化
+    enum Initialize {
+        struct Request {
+            var latitude: Double
+            var longitude: Double
+        }
+        struct Response {
+            var latitude: Double
+            var longitude: Double
+            var isShowUserPosition: Bool
+        }
+        struct ViewModel {
+            var state: MapInitializeState
+        }
     }
-    struct Response {
-    }
-    struct ViewModel {
-    }
-  }
 }

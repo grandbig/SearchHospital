@@ -1,5 +1,5 @@
 //
-//  MapInteractor
+//  MapInteractor.swift
 //  SearchHospital
 //
 //  Created by Takahiro Kato on 2018/04/12.
@@ -13,25 +13,28 @@
 import UIKit
 
 protocol MapBusinessLogic {
-  func doSomething(request: Map.Something.Request)
+    func initialize(request: Map.Initialize.Request)
 }
 
 protocol MapDataStore {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class MapInteractor: MapBusinessLogic, MapDataStore {
-  var presenter: MapPresentationLogic?
-  var worker: MapWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Map.Something.Request) {
-    worker = MapWorker()
-    worker?.doSomeWork()
+    var presenter: MapPresentationLogic?
+    var worker: MapWorker?
+    var isInitialized = false
+    //var name: String = ""
     
-    let response = Map.Something.Response()
-    presenter?.presentSomething(response: response)
+    // MARK: Initialize
+    func initialize(request: Map.Initialize.Request) {
+        var isShowUserPosition = false
+        isShowUserPosition = isInitialized ? true : isShowUserPosition
+        isInitialized = isInitialized ? isInitialized : true
+
+        let response = Map.Initialize.Response(latitude: request.latitude,
+                                               longitude: request.longitude,
+                                               isShowUserPosition: isShowUserPosition)
+        presenter?.presentInitialize(response: response)
   }
 }

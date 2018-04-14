@@ -1,5 +1,5 @@
 //
-//  MapWorker
+//  MapWorker.swift
 //  SearchHospital
 //
 //  Created by Takahiro Kato on 2018/04/12.
@@ -13,6 +13,6 @@
 import UIKit
 
 class MapWorker {
-  func doSomeWork() {
-  }
+    func doSomeWork() {
+    }
 }
