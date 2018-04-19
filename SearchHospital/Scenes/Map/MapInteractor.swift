@@ -11,9 +11,11 @@
 //
 
 import UIKit
+import PromiseKit
 
 protocol MapBusinessLogic {
     func initialize(request: Map.Initialize.Request)
+    func search(request: Map.Search.Request)
 }
 
 protocol MapDataStore {
@@ -22,9 +24,8 @@ protocol MapDataStore {
 
 class MapInteractor: MapBusinessLogic, MapDataStore {
     var presenter: MapPresentationLogic?
-    var worker: MapWorker?
+    var worker = HospitalWorker(dataStore: HospitalAPI.sharedInstance)
     var isInitialized = false
-    //var name: String = ""
     
     // MARK: Initialize
     func initialize(request: Map.Initialize.Request) {
@@ -36,5 +37,15 @@ class MapInteractor: MapBusinessLogic, MapDataStore {
                                                longitude: request.longitude,
                                                isShowUserPosition: isShowUserPosition)
         presenter?.presentInitialize(response: response)
-  }
+    }
+
+    func search(request: Map.Search.Request) {
+        firstly {
+            worker.fetchHospitals()
+        }.done { response in
+            print("test")
+        }.catch { _ in
+            print("error")
+        }
+    }
 }

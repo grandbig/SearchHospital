@@ -58,6 +58,18 @@ name: Moya, nameSpecified:
 body: The MIT License (MIT…
 version: 10.0.1
 
+name: PromiseKit, nameSpecified: 
+body: Copyright 2016-prese…
+version: 6.2.4
+
+name: PromiseKit, nameSpecified: 
+body: Copyright 2016-prese…
+version: 6.2.4
+
+name: PromiseKit, nameSpecified: 
+body: Copyright 2016-prese…
+version: 6.2.4
+
 name: R.swift, nameSpecified: 
 body: The MIT License (MIT…
 version: 4.0.0

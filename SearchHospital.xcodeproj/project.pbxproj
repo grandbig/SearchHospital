@@ -15,6 +15,9 @@
 		2E5410FA207F942800DB6417 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410F4207F942800DB6417 /* MapWorker.swift */; };
 		2E5410FE207FAA0600DB6417 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5410FD207FAA0600DB6417 /* R.generated.swift */; };
 		2E5411012082384700DB6417 /* Map.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E5411002082384700DB6417 /* Map.strings */; };
+		2E54110320888DB400DB6417 /* HospitalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54110220888DB400DB6417 /* HospitalWorker.swift */; };
+		2E5411052088930A00DB6417 /* HospitalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411042088930A00DB6417 /* HospitalAPI.swift */; };
+		2E5411072088DFB300DB6417 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E5411062088DFB300DB6417 /* Common.strings */; };
 		2EC334B12070859C00ABA45B /* key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC334B02070859C00ABA45B /* key.plist */; };
 		2ED7164520707DF800AB9F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7164420707DF800AB9F87 /* AppDelegate.swift */; };
 		2ED7164A20707DF800AB9F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7164820707DF800AB9F87 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		2E5410F4207F942800DB6417 /* MapWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 		2E5410FD207FAA0600DB6417 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		2E5411002082384700DB6417 /* Map.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Map.strings; sourceTree = "<group>"; };
+		2E54110220888DB400DB6417 /* HospitalWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalWorker.swift; sourceTree = "<group>"; };
+		2E5411042088930A00DB6417 /* HospitalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalAPI.swift; sourceTree = "<group>"; };
+		2E5411062088DFB300DB6417 /* Common.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Common.strings; sourceTree = "<group>"; };
 		2EC334B02070859C00ABA45B /* key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = key.plist; sourceTree = "<group>"; };
 		2ED7164120707DF800AB9F87 /* SearchHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7164420707DF800AB9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		2E5410E9207EF08A00DB6417 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2E5411042088930A00DB6417 /* HospitalAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 		2E5410EA207EF09100DB6417 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				2E54110220888DB400DB6417 /* HospitalWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5411002082384700DB6417 /* Map.strings */,
+				2E5411062088DFB300DB6417 /* Common.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 				2ED7164C20707DF900AB9F87 /* Assets.xcassets in Resources */,
 				2ED7164A20707DF800AB9F87 /* Main.storyboard in Resources */,
 				2E5411012082384700DB6417 /* Map.strings in Resources */,
+				2E5411072088DFB300DB6417 /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +404,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -402,6 +413,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -544,6 +556,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -552,6 +565,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -570,6 +584,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchHospital/Pods-SearchHospital-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -578,6 +593,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -623,6 +639,8 @@
 				2E5410F8207F942800DB6417 /* MapInteractor.swift in Sources */,
 				2E5410F7207F942800DB6417 /* MapViewController.swift in Sources */,
 				2E5410F5207F942800DB6417 /* MapPresenter.swift in Sources */,
+				2E54110320888DB400DB6417 /* HospitalWorker.swift in Sources */,
+				2E5411052088930A00DB6417 /* HospitalAPI.swift in Sources */,
 				2E5410FE207FAA0600DB6417 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

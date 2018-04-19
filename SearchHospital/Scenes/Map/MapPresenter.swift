@@ -19,9 +19,11 @@ enum MapInitializeState {
 
 protocol MapPresentationLogic {
     func presentInitialize(response: Map.Initialize.Response)
+    func presentSearch(response: Map.Search.Response)
 }
 
 class MapPresenter: MapPresentationLogic {
+
     weak var viewController: MapDisplayLogic?
     
     // MARK: Initialize
@@ -37,5 +39,9 @@ class MapPresenter: MapPresentationLogic {
             viewModel = Map.Initialize.ViewModel(state: state)
         }
         viewController?.displayInitialize(viewModel: viewModel)
+    }
+    
+    // MARK: 検索
+    func presentSearch(response: Map.Search.Response) {
     }
 }

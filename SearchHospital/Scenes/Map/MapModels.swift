@@ -30,4 +30,14 @@ enum Map {
             var state: MapInitializeState
         }
     }
+
+    // MARK: 検索
+    enum Search {
+        struct Request {
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
+    }
 }

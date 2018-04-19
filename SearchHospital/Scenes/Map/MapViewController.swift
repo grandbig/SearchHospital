@@ -14,10 +14,12 @@ import UIKit
 import GoogleMaps
 
 protocol MapDisplayLogic: class {
-  func displayInitialize(viewModel: Map.Initialize.ViewModel)
+    func displayInitialize(viewModel: Map.Initialize.ViewModel)
+    func displaySearched(viewModel: Map.Search.ViewModel)
 }
 
 class MapViewController: UIViewController, MapDisplayLogic {
+
     // MARK: - IBOutlets
     @IBOutlet private weak var mapView: GMSMapView!
 
@@ -83,18 +85,24 @@ class MapViewController: UIViewController, MapDisplayLogic {
     }
     
     // MARK: View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureMapView()
         configureLocationManager()
+        search()
     }
     
     // MARK: Initialize
     func initialize(latitude: Double, longitude: Double) {
         let request = Map.Initialize.Request(latitude: latitude, longitude: longitude)
         interactor?.initialize(request: request)
+    }
+
+    // MARK: 検索
+    func search() {
+        let request = Map.Search.Request()
+        interactor?.search(request: request)
     }
 }
 
@@ -110,6 +118,9 @@ extension MapViewController {
         default:
             break
         }
+    }
+
+    func displaySearched(viewModel: Map.Search.ViewModel) {
     }
 }
 
@@ -141,5 +152,8 @@ extension MapViewController: CLLocationManagerDelegate {
 
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
-    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        search()
+        return false
+    }
 }
