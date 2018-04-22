@@ -35,7 +35,7 @@ class MapPresenter: MapPresentationLogic {
         } else {
             let state = MapInitializeState.unInitialized(latitude: response.latitude,
                                                          longitude: response.longitude,
-                                                         zoomLevel: 16.0)
+                                                         zoomLevel: 10.0)
             viewModel = Map.Initialize.ViewModel(state: state)
         }
         viewController?.displayInitialize(viewModel: viewModel)

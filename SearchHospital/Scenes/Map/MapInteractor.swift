@@ -24,7 +24,7 @@ protocol MapDataStore {
 
 class MapInteractor: MapBusinessLogic, MapDataStore {
     var presenter: MapPresentationLogic?
-    var worker = HospitalWorker(dataStore: HospitalAPI.sharedInstance)
+    var worker = HospitalWorker(dataStore: HospitalAPI())
     var isInitialized = false
     
     // MARK: Initialize
@@ -39,10 +39,15 @@ class MapInteractor: MapBusinessLogic, MapDataStore {
         presenter?.presentInitialize(response: response)
     }
 
+    // MARK: Search Hospitals
     func search(request: Map.Search.Request) {
+        guard let latitude = request.latitude, let longitude = request.longitude else {
+            // TODO: 最終的に「現在地が取得できない」系のアラートを表示したい
+            return
+        }
         firstly {
-            worker.fetchHospitals()
-        }.done { response in
+            worker.fetchHospitals(lat: latitude, lng: longitude)
+        }.done { _ in
             print("test")
         }.catch { _ in
             print("error")

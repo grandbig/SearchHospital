@@ -101,7 +101,8 @@ class MapViewController: UIViewController, MapDisplayLogic {
 
     // MARK: 検索
     func search() {
-        let request = Map.Search.Request()
+        let request = Map.Search.Request(latitude: mapView.myLocation?.coordinate.latitude ?? 35.681167,
+                                         longitude: mapView.myLocation?.coordinate.longitude ?? 139.767052)
         interactor?.search(request: request)
     }
 }

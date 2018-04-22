@@ -34,6 +34,8 @@ enum Map {
     // MARK: 検索
     enum Search {
         struct Request {
+            var latitude: Double?
+            var longitude: Double?
         }
         struct Response {
         }
