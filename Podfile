@@ -10,6 +10,7 @@ target "SearchHospital" do
   pod 'Moya'
   pod 'SwiftyJSON'
   pod 'R.swift'
+  pod 'PromiseKit', '~> 6.0'
 
   abstract_target 'Tests' do
     target "SearchHospitalTests"

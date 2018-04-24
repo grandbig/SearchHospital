@@ -1,0 +1,19 @@
+// ファイル名
+"keyFileName" = "key";
+"plistExtension" = "plist";
+"googleApiKey" = "googleApiKey";
+"googleApiKeyName" = "googleApiKey";
+
+// パラメータ名
+// Key名
+"apiKeyName" = "key";
+"locationKeyName" = "location";
+"typeKeyName" = "type";
+"radiusKeyName" = "radius";
+
+// Value名
+"hospitalTypeValueName" = "hospital";
+
+"ok" = "OK";
+"cancel" = "キャンセル";
+"confirmation" = "確認";
