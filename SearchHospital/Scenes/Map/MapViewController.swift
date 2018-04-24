@@ -12,13 +12,14 @@
 
 import UIKit
 import GoogleMaps
+import PromiseKit
 
 protocol MapDisplayLogic: class {
     func displayInitialize(viewModel: Map.Initialize.ViewModel)
     func displaySearched(viewModel: Map.Search.ViewModel)
 }
 
-class MapViewController: UIViewController, MapDisplayLogic {
+class MapViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var mapView: GMSMapView!
@@ -107,7 +108,8 @@ class MapViewController: UIViewController, MapDisplayLogic {
     }
 }
 
-extension MapViewController {
+// MARK: - MapDisplayLogic
+extension MapViewController: MapDisplayLogic {
 
     func displayInitialize(viewModel: Map.Initialize.ViewModel) {
         switch viewModel.state {
@@ -122,6 +124,33 @@ extension MapViewController {
     }
 
     func displaySearched(viewModel: Map.Search.ViewModel) {
+        
+        switch viewModel.state {
+        case let .success(places):
+            places.forEach {
+                putMarker(place: $0)
+            }
+        case let .failure(description):
+            _ = showAlert(message: description)
+        }
+    }
+}
+
+// MARK: - private methods
+extension MapViewController {
+    
+    /// マップへのマーカのプロット処理
+    ///
+    /// - Parameter place: 病院のプレイス情報
+    private func putMarker(place: Map.Search.ViewModel.Place) {
+        let marker = CustomGMSMarker()
+        marker.placeId = place.placeId
+        marker.name = place.name
+        marker.rating = place.rating ?? 0.0
+        marker.priceLevel = place.priceLevel ?? 0
+        marker.openNow = place.openNow
+        marker.appearAnimation = GMSMarkerAnimation.pop
+        marker.map = mapView
     }
 }
 

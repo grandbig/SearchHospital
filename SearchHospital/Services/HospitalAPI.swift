@@ -7,13 +7,17 @@
 //
 
 import Foundation
-import GooglePlaces
 import Moya
 import PromiseKit
-import SwiftyJSON
 
 internal enum HospitalAPITarget {
     case hospitals(lat: Double, lng: Double)
+}
+
+internal enum APIError: Error {
+    case cancel
+    case apiError(description: String)
+    case decodeError
 }
 
 extension HospitalAPITarget: TargetType {
@@ -101,28 +105,12 @@ class HospitalAPI: HospitalProtocol {
     }
 
     // MARK: CRUD operations
-    func fetchHospitals() -> Promise<[GMSPlaceLikelihood]> {
-        let (promise, resolver) = Promise<[GMSPlaceLikelihood]>.pending()
-
-        GMSPlacesClient.shared().currentPlace { (placeLikelihoods, error) in
-            if let error = error {
-                print("\(error)")
-                resolver.reject(error)
-            }
-            var result = [GMSPlaceLikelihood]()
-            if let likelihoodList = placeLikelihoods {
-                for likelihood in likelihoodList.likelihoods {
-                    result.append(likelihood)
-                }
-            }
-            resolver.fulfill(result)
-        }
-        
-        return promise
-    }
     
-    func fetchHospitals(lat: Double, lng: Double) -> Promise<Void> {
-        let (promise, resolver) = Promise<Void>.pending()
+    /// 指定の緯度、経度から一定範囲内の病院を検索する処理
+    ///
+    /// - Returns: 病院のプレイス情報
+    func fetchHospitals(lat: Double, lng: Double) -> Promise<[Place]> {
+        let (promise, resolver) = Promise<[Place]>.pending()
         
         provider.request(.hospitals(lat: lat, lng: lng)) { result in
             switch result {
@@ -131,14 +119,13 @@ class HospitalAPI: HospitalProtocol {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let places = try decoder.decode(Places.self, from: response.data)
-                    print("places: \(places)")
                     
-                    resolver.fulfill(Void())
+                    resolver.fulfill(places.results)
                 } catch {
-                    print("error: 変換エラー？")
+                    resolver.reject(APIError.decodeError)
                 }
             case .failure(let error):
-                print("error: \(error)")
+                resolver.reject(APIError.apiError(description: error.localizedDescription))
             }
         }
         

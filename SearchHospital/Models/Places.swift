@@ -59,13 +59,7 @@ public struct Place: Codable {
 
 public struct Places: Codable {
     
-    public var places: [Place]
+    public var results: [Place]
     public var status: String
     public var htmlAttributions: [String]
-    
-    private enum CodingKeys: String, CodingKey {
-        case places = "results"
-        case status
-        case htmlAttributions
-    }
 }

@@ -13,3 +13,7 @@
 
 // Value名
 "hospitalTypeValueName" = "hospital";
+
+"ok" = "OK";
+"cancel" = "キャンセル";
+"confirmation" = "確認";

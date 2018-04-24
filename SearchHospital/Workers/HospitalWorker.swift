@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import GooglePlaces
 import PromiseKit
 
 protocol HospitalProtocol {
 
-    func fetchHospitals() -> Promise<[GMSPlaceLikelihood]>
-    func fetchHospitals(lat: Double, lng: Double) -> Promise<Void>
+    func fetchHospitals(lat: Double, lng: Double) -> Promise<[Place]>
 }
 
 class HospitalWorker {
@@ -22,12 +20,8 @@ class HospitalWorker {
     init(dataStore: HospitalProtocol) {
         self.dataStore = dataStore
     }
-
-    func fetchHospitals() -> Promise<[GMSPlaceLikelihood]> {
-        return dataStore.fetchHospitals()
-    }
     
-    func fetchHospitals(lat: Double, lng: Double) -> Promise<Void> {
+    func fetchHospitals(lat: Double, lng: Double) -> Promise<[Place]> {
         return dataStore.fetchHospitals(lat: lat, lng: lng)
     }
 }

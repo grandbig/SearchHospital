@@ -47,10 +47,14 @@ class MapInteractor: MapBusinessLogic, MapDataStore {
         }
         firstly {
             worker.fetchHospitals(lat: latitude, lng: longitude)
-        }.done { _ in
-            print("test")
-        }.catch { _ in
-            print("error")
+        }.done { [weak self] results in
+            guard let strongSelf = self else { return }
+            let response = Map.Search.Response(type: .success(places: results))
+            strongSelf.presenter?.presentSearch(response: response)
+        }.catch { [weak self] error in
+            guard let strongSelf = self else { return }
+            let response = Map.Search.Response(type: .failure(description: error.localizedDescription))
+            strongSelf.presenter?.presentSearch(response: response)
         }
     }
 }

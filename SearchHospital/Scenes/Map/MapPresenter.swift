@@ -12,9 +12,16 @@
 
 import UIKit
 
+/// マップ初期化の状態
 enum MapInitializeState {
     case unInitialized(latitude: Double, longitude: Double, zoomLevel: Float)
     case initialized
+}
+
+/// 検索結果の状態
+enum MapSearchState {
+    case success(places: [Map.Search.ViewModel.Place])
+    case failure(description: String)
 }
 
 protocol MapPresentationLogic {
@@ -43,5 +50,39 @@ class MapPresenter: MapPresentationLogic {
     
     // MARK: 検索
     func presentSearch(response: Map.Search.Response) {
+        var viewModel: Map.Search.ViewModel!
+        
+        switch response.type {
+        case let .success(places):
+            let state = MapSearchState.success(places: convertToViewPlaceModel(places: places))
+            viewModel = Map.Search.ViewModel(state: state)
+        case let .failure(description):
+            viewModel = Map.Search.ViewModel(state: .failure(description: description))
+        }
+        viewController?.displaySearched(viewModel: viewModel)
+    }
+}
+
+extension MapPresenter {
+    
+    /// 描画用のMap.Search.ViewModel.Placeに変換する処理
+    ///
+    /// - Parameter places: 病院情報の配列
+    /// - Returns: 描画用の病院情報配列
+    private func convertToViewPlaceModel(places: [Place]) -> [Map.Search.ViewModel.Place] {
+        typealias ViewPlaceModel = Map.Search.ViewModel.Place
+        
+        let results = places.map {
+            ViewPlaceModel(placeId: $0.placeId,
+                           name: $0.name,
+                           iconUrl: $0.icon,
+                           latitude: $0.geometry.location.lat,
+                           longitude: $0.geometry.location.lng,
+                           rating: $0.rating,
+                           priceLevel: $0.priceLevel,
+                           openNow: $0.openingHours?.openNow != nil)
+        }
+        
+        return results
     }
 }

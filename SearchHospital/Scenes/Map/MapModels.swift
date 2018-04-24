@@ -38,8 +38,26 @@ enum Map {
             var longitude: Double?
         }
         struct Response {
+            var type: ResponseType
+            
+            enum ResponseType {
+                case success(places: [Place])
+                case failure(description: String)
+            }
         }
         struct ViewModel {
+            var state: MapSearchState
+            
+            struct Place {
+                var placeId: String
+                var name: String
+                var iconUrl: String
+                var latitude: Double
+                var longitude: Double
+                var rating: Double?
+                var priceLevel: Int?
+                var openNow: Bool
+            }
         }
     }
 }
