@@ -42,7 +42,8 @@ class MapInteractor: MapBusinessLogic, MapDataStore {
     // MARK: Search Hospitals
     func search(request: Map.Search.Request) {
         guard let latitude = request.latitude, let longitude = request.longitude else {
-            // TODO: 最終的に「現在地が取得できない」系のアラートを表示したい
+            let response = Map.Search.Response(type: .failure(description: R.string.map.currentLocationErrorMessage()))
+            presenter?.presentSearch(response: response)
             return
         }
         firstly {

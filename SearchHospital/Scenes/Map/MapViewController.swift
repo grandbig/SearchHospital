@@ -91,7 +91,6 @@ class MapViewController: UIViewController {
 
         configureMapView()
         configureLocationManager()
-        search()
     }
     
     // MARK: Initialize
@@ -105,6 +104,10 @@ class MapViewController: UIViewController {
         let request = Map.Search.Request(latitude: mapView.myLocation?.coordinate.latitude ?? 35.681167,
                                          longitude: mapView.myLocation?.coordinate.longitude ?? 139.767052)
         interactor?.search(request: request)
+    }
+    
+    @IBAction func tappedSearchButton(_ sender: Any) {
+        search()
     }
 }
 
@@ -146,6 +149,7 @@ extension MapViewController {
         let marker = CustomGMSMarker()
         marker.placeId = place.placeId
         marker.name = place.name
+        marker.position = CLLocationCoordinate2D.init(latitude: place.latitude, longitude: place.longitude)
         marker.rating = place.rating ?? 0.0
         marker.priceLevel = place.priceLevel ?? 0
         marker.openNow = place.openNow
@@ -183,7 +187,6 @@ extension MapViewController: CLLocationManagerDelegate {
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
-        search()
         return false
     }
 }

@@ -32,6 +32,7 @@ protocol MapPresentationLogic {
 class MapPresenter: MapPresentationLogic {
 
     weak var viewController: MapDisplayLogic?
+    private let zoomLevel: Float = 15.5
     
     // MARK: Initialize
     func presentInitialize(response: Map.Initialize.Response) {
@@ -42,7 +43,7 @@ class MapPresenter: MapPresentationLogic {
         } else {
             let state = MapInitializeState.unInitialized(latitude: response.latitude,
                                                          longitude: response.longitude,
-                                                         zoomLevel: 10.0)
+                                                         zoomLevel: zoomLevel)
             viewModel = Map.Initialize.ViewModel(state: state)
         }
         viewController?.displayInitialize(viewModel: viewModel)

@@ -22,10 +22,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-5D-vmr">
+                                <rect key="frame" x="311" y="473" width="56" height="56"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="0Kk-7B-B8g"/>
+                                    <constraint firstAttribute="height" constant="56" id="QWs-EJ-gP9"/>
+                                </constraints>
+                                <state key="normal" image="SearchIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowIBColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mzu-ha-Edz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hpx-5D-vmr" secondAttribute="trailing" constant="8" id="FA4-So-DGh"/>
                             <constraint firstItem="qdN-m4-gxT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W3G-MM-8DZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hpx-5D-vmr" secondAttribute="bottom" constant="74" id="a7J-Ez-YPo"/>
                             <constraint firstItem="qdN-m4-gxT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hUE-vu-C0C"/>
                             <constraint firstItem="qdN-m4-gxT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oTF-G9-efc"/>
                             <constraint firstItem="qdN-m4-gxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yg0-Ps-xNf"/>
@@ -61,4 +90,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SearchIcon" width="36" height="36"/>
+    </resources>
 </document>
