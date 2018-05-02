@@ -11,6 +11,8 @@ target "SearchHospital" do
   pod 'SwiftyJSON'
   pod 'R.swift'
   pod 'PromiseKit', '~> 6.0'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   abstract_target 'Tests' do
     target "SearchHospitalTests"

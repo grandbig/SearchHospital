@@ -9,6 +9,8 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+        Fabric.with([Crashlytics.self])
         
         return true
     }
