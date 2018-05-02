@@ -29,6 +29,8 @@ class MapViewController: UIViewController {
     var router: (NSObjectProtocol & MapRoutingLogic & MapDataPassing)?
     /// 位置情報マネージャ
     internal var locationManager: CLLocationManager?
+    private let defaultLatitude: Double = 35.681167
+    private let defaultLongitude: Double = 139.767052
 
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -101,8 +103,8 @@ class MapViewController: UIViewController {
 
     // MARK: 検索
     func search() {
-        let request = Map.Search.Request(latitude: mapView.myLocation?.coordinate.latitude ?? 35.681167,
-                                         longitude: mapView.myLocation?.coordinate.longitude ?? 139.767052)
+        let request = Map.Search.Request(latitude: mapView.myLocation?.coordinate.latitude ?? defaultLatitude,
+                                         longitude: mapView.myLocation?.coordinate.longitude ?? defaultLongitude)
         interactor?.search(request: request)
     }
     

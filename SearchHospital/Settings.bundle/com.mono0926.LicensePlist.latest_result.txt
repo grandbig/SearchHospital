@@ -10,6 +10,30 @@ name: Alamofire, nameSpecified:
 body: Copyright (c) 2014-2…
 version: 4.5.1
 
+name: Crashlytics, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 3.10.1
+
+name: Crashlytics, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 3.10.1
+
+name: Crashlytics, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 3.10.1
+
+name: Fabric, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 1.7.6
+
+name: Fabric, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 1.7.6
+
+name: Fabric, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 1.7.6
+
 name: GoogleMaps, nameSpecified: 
 body: Copyright 2017 Googl…
 version: 2.5.0
