@@ -155,6 +155,7 @@ extension MapViewController {
         marker.rating = place.rating ?? 0.0
         marker.priceLevel = place.priceLevel ?? 0
         marker.openNow = place.openNow
+        marker.icon = UIImage(named: "HospitalMarkerIcon")
         marker.appearAnimation = GMSMarkerAnimation.pop
         marker.map = mapView
     }
