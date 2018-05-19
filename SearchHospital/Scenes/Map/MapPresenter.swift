@@ -24,9 +24,16 @@ enum MapSearchState {
     case failure(description: String)
 }
 
+/// 写真取得結果の状態
+enum MapFetchPhotoState {
+    case success(image: UIImage?)
+    case failure(description: String)
+}
+
 protocol MapPresentationLogic {
     func presentInitialize(response: Map.Initialize.Response)
     func presentSearch(response: Map.Search.Response)
+    func presentPhoto(response: Map.FetchPhoto.Response)
 }
 
 class MapPresenter: MapPresentationLogic {
@@ -61,6 +68,19 @@ class MapPresenter: MapPresentationLogic {
             viewModel = Map.Search.ViewModel(state: .failure(description: description))
         }
         viewController?.displaySearched(viewModel: viewModel)
+    }
+
+    // MARK: 病院の写真を取得
+    func presentPhoto(response: Map.FetchPhoto.Response) {
+        var viewModel: Map.FetchPhoto.ViewModel!
+        
+        switch response.type {
+        case let .success(image):
+            viewModel = Map.FetchPhoto.ViewModel(state: .success(image: image))
+        case let .failure(description):
+            viewModel = Map.FetchPhoto.ViewModel(state: .failure(description: description))
+        }
+        viewController?.displayFetchedPhoto(viewModel: viewModel)
     }
 }
 

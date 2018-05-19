@@ -60,4 +60,21 @@ enum Map {
             }
         }
     }
+
+    enum FetchPhoto {
+        struct Request {
+            var placeId: String
+        }
+        struct Response {
+            var type: ResponseType
+            
+            enum ResponseType {
+                case success(image: UIImage?)
+                case failure(description: String)
+            }
+        }
+        struct ViewModel {
+            var state: MapFetchPhotoState
+        }
+    }
 }

@@ -10,6 +10,8 @@
 "locationKeyName" = "location";
 "typeKeyName" = "type";
 "radiusKeyName" = "radius";
+"photoreferenceKeyName" = "photoreference";
+"maxWidthKeyName" = "maxWidth";
 
 // Value名
 "hospitalTypeValueName" = "hospital";

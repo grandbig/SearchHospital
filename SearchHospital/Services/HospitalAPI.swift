@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 import PromiseKit
+import GooglePlaces
 
 internal enum HospitalAPITarget {
     case hospitals(lat: Double, lng: Double)
@@ -18,6 +19,11 @@ internal enum APIError: Error {
     case cancel
     case apiError(description: String)
     case decodeError
+}
+
+internal enum GooglePlacesError: Error {
+    case cancel
+    case notFoundError
 }
 
 extension HospitalAPITarget: TargetType {
@@ -42,7 +48,11 @@ extension HospitalAPITarget: TargetType {
     
     // ベースURLを文字列で定義
     private var _baseURL: String {
-        return R.string.url.googlePlacesApiPlaceUrl()
+        switch self {
+        case .hospitals:
+            return R.string.url.googlePlacesApiPlaceUrl()
+        }
+        
     }
     
     public var baseURL: URL {
@@ -76,7 +86,7 @@ extension HospitalAPITarget: TargetType {
     // パラメータの設定
     var task: Task {
         switch self {
-        case .hospitals(let lat, let lng):
+        case let .hospitals(lat, lng):
             return .requestParameters(parameters: [
                 R.string.common.keyFileName(): apiKey,
                 R.string.common.locationKeyName(): "\(lat),\(lng)",
@@ -96,7 +106,6 @@ extension HospitalAPITarget: TargetType {
 }
 
 class HospitalAPI: HospitalProtocol {
-    
     private var provider: MoyaProvider<HospitalAPITarget>!
 
     /// イニシャライザ
@@ -127,6 +136,30 @@ class HospitalAPI: HospitalProtocol {
             case .failure(let error):
                 resolver.reject(APIError.apiError(description: error.localizedDescription))
             }
+        }
+        
+        return promise
+    }
+
+    func fetchPhoto(placeId: String) -> Promise<UIImage?> {
+        let (promise, resolver) = Promise<UIImage?>.pending()
+
+        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: placeId) { (photos, error) in
+            if let error = error {
+                resolver.reject(error)
+                return
+            }
+            guard let firstPhoto = photos?.results.first else {
+                resolver.reject(GooglePlacesError.notFoundError)
+                return
+            }
+            GMSPlacesClient.shared().loadPlacePhoto(firstPhoto, callback: { (image, error) in
+                if let error = error {
+                    resolver.reject(error)
+                    return
+                }
+                resolver.fulfill(image)
+            })
         }
         
         return promise

@@ -16,6 +16,7 @@ import PromiseKit
 protocol MapBusinessLogic {
     func initialize(request: Map.Initialize.Request)
     func search(request: Map.Search.Request)
+    func fetchPhoto(request: Map.FetchPhoto.Request)
 }
 
 protocol MapDataStore {
@@ -56,6 +57,21 @@ class MapInteractor: MapBusinessLogic, MapDataStore {
             guard let strongSelf = self else { return }
             let response = Map.Search.Response(type: .failure(description: error.localizedDescription))
             strongSelf.presenter?.presentSearch(response: response)
+        }
+    }
+
+    // MARK: Fetch Hospital Photo
+    func fetchPhoto(request: Map.FetchPhoto.Request) {
+        firstly {
+            worker.fetchPhoto(placeId: request.placeId)
+        }.done { [weak self] result in
+            guard let strongSelf = self else { return }
+            let response = Map.FetchPhoto.Response(type: .success(image: result))
+            strongSelf.presenter?.presentPhoto(response: response)
+        }.catch { [weak self] error in
+            guard let strongSelf = self else { return }
+            let response = Map.FetchPhoto.Response(type: .failure(description: error.localizedDescription))
+            strongSelf.presenter?.presentPhoto(response: response)
         }
     }
 }
