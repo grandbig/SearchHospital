@@ -12,6 +12,7 @@ import PromiseKit
 protocol HospitalProtocol {
 
     func fetchHospitals(lat: Double, lng: Double) -> Promise<[Place]>
+    func fetchPhoto(placeId: String) -> Promise<UIImage?>
 }
 
 class HospitalWorker {
@@ -23,5 +24,9 @@ class HospitalWorker {
     
     func fetchHospitals(lat: Double, lng: Double) -> Promise<[Place]> {
         return dataStore.fetchHospitals(lat: lat, lng: lng)
+    }
+
+    func fetchPhoto(placeId: String) -> Promise<UIImage?> {
+        return dataStore.fetchPhoto(placeId: placeId)
     }
 }

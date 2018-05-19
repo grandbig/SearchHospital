@@ -22,6 +22,8 @@ class CustomGMSMarker: GMSMarker {
     public var priceLevel: Int!
     /// 現在の営業状態
     public var openNow: Bool!
+    /// 情報ウィンドウ
+    public var infoWindow: UIView!
     
     /// 初期化
     override init() {

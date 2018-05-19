@@ -17,6 +17,7 @@ import PromiseKit
 protocol MapDisplayLogic: class {
     func displayInitialize(viewModel: Map.Initialize.ViewModel)
     func displaySearched(viewModel: Map.Search.ViewModel)
+    func displayFetchedPhoto(viewModel: Map.FetchPhoto.ViewModel)
 }
 
 class MapViewController: UIViewController {
@@ -107,7 +108,12 @@ class MapViewController: UIViewController {
                                          longitude: mapView.myLocation?.coordinate.longitude ?? defaultLongitude)
         interactor?.search(request: request)
     }
-    
+
+    func fetchPhoto(placeId: String) {
+        let request = Map.FetchPhoto.Request(placeId: placeId)
+        interactor?.fetchPhoto(request: request)
+    }
+
     @IBAction func tappedSearchButton(_ sender: Any) {
         search()
     }
@@ -139,6 +145,22 @@ extension MapViewController: MapDisplayLogic {
             _ = showAlert(message: description)
         }
     }
+
+    func displayFetchedPhoto(viewModel: Map.FetchPhoto.ViewModel) {
+        switch viewModel.state {
+        case let .success(image):
+            guard let cMarker = mapView.selectedMarker as? CustomGMSMarker else {
+                return
+            }
+            guard let infoWindow = cMarker.infoWindow as? MarkerInfoContentsView else {
+                return
+            }
+            infoWindow.configure(image: image)
+        case let .failure(description):
+            print(description)
+        }
+        
+    }
 }
 
 // MARK: - private methods
@@ -148,6 +170,11 @@ extension MapViewController {
     ///
     /// - Parameter place: 病院のプレイス情報
     private func putMarker(place: Map.Search.ViewModel.Place) {
+        // 情報ウィンドウの初期化
+        let infoWindow = MarkerInfoContentsView(frame: CGRect(x: 0, y: 0, width: 250, height: 265))
+        infoWindow.setup(name: place.name, rating: place.rating ?? 0.0, priceLevel: place.priceLevel ?? 0)
+
+        // マーカの初期化
         let marker = CustomGMSMarker()
         marker.placeId = place.placeId
         marker.name = place.name
@@ -155,9 +182,11 @@ extension MapViewController {
         marker.rating = place.rating ?? 0.0
         marker.priceLevel = place.priceLevel ?? 0
         marker.openNow = place.openNow
-        marker.icon = UIImage(named: "HospitalMarkerIcon")
+        marker.infoWindow = infoWindow
+        marker.icon = R.image.hospitalMarkerIcon()
         marker.appearAnimation = GMSMarkerAnimation.pop
         marker.map = mapView
+        marker.tracksInfoWindowChanges = true
     }
 }
 
@@ -189,7 +218,16 @@ extension MapViewController: CLLocationManagerDelegate {
 
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
+
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
         return false
+    }
+
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        guard let cMarker = marker as? CustomGMSMarker else {
+            return nil
+        }
+        fetchPhoto(placeId: cMarker.placeId)
+        return cMarker.infoWindow
     }
 }

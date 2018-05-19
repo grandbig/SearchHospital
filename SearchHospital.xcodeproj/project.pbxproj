@@ -29,6 +29,8 @@
 		2ED7164F20707DF900AB9F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED7164D20707DF900AB9F87 /* LaunchScreen.storyboard */; };
 		2ED7165A20707DF900AB9F87 /* SearchHospitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7165920707DF900AB9F87 /* SearchHospitalTests.swift */; };
 		2ED7166520707DF900AB9F87 /* SearchHospitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7166420707DF900AB9F87 /* SearchHospitalUITests.swift */; };
+		2EDC8641209EFAC600821D55 /* MarkerInfoContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC8640209EFAC600821D55 /* MarkerInfoContentsView.swift */; };
+		2EDC8643209EFAEF00821D55 /* MarkerInfoContentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EDC8642209EFAEF00821D55 /* MarkerInfoContentsView.xib */; };
 		C3A693147A0575C9ECE238ED /* Pods_SearchHospital_Tests_SearchHospitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217431FEEE90102ED6BCA996 /* Pods_SearchHospital_Tests_SearchHospitalTests.framework */; };
 		C3C5CC6FA64200868D8932BE /* Pods_SearchHospital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DE061E1E03BDA7506B4056 /* Pods_SearchHospital.framework */; };
 		C48786F1D1A65557EB4A0750 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B5B283C7685D65EBDD3344 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework */; };
@@ -81,6 +83,8 @@
 		2ED7166020707DF900AB9F87 /* SearchHospitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchHospitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED7166420707DF900AB9F87 /* SearchHospitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHospitalUITests.swift; sourceTree = "<group>"; };
 		2ED7166620707DF900AB9F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDC8640209EFAC600821D55 /* MarkerInfoContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerInfoContentsView.swift; sourceTree = "<group>"; };
+		2EDC8642209EFAEF00821D55 /* MarkerInfoContentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerInfoContentsView.xib; sourceTree = "<group>"; };
 		36B5B283C7685D65EBDD3344 /* Pods_SearchHospital_Tests_SearchHospitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchHospital_Tests_SearchHospitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF5F6E42611D44B1372A565 /* Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalUITests/Pods-SearchHospital-Tests-SearchHospitalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CE3A471C7E0CC0ED2AEC7CB /* Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchHospital-Tests-SearchHospitalTests/Pods-SearchHospital-Tests-SearchHospitalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		2E5410EE207F93D400DB6417 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2EDC863F209EFA0B00821D55 /* View */,
 				2E5410F2207F942800DB6417 /* MapInteractor.swift */,
 				2E5410F3207F942800DB6417 /* MapModels.swift */,
 				2E5410EF207F942800DB6417 /* MapPresenter.swift */,
@@ -249,6 +254,15 @@
 				2ED7166620707DF900AB9F87 /* Info.plist */,
 			);
 			path = SearchHospitalUITests;
+			sourceTree = "<group>";
+		};
+		2EDC863F209EFA0B00821D55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EDC8640209EFAC600821D55 /* MarkerInfoContentsView.swift */,
+				2EDC8642209EFAEF00821D55 /* MarkerInfoContentsView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F8E7435849F5C9D4138D8837 /* Pods */ = {
@@ -392,6 +406,7 @@
 			files = (
 				2EC334B12070859C00ABA45B /* key.plist in Resources */,
 				2ED7164F20707DF900AB9F87 /* LaunchScreen.storyboard in Resources */,
+				2EDC8643209EFAEF00821D55 /* MarkerInfoContentsView.xib in Resources */,
 				2ED7164C20707DF900AB9F87 /* Assets.xcassets in Resources */,
 				2ED7164A20707DF800AB9F87 /* Main.storyboard in Resources */,
 				2ECCEE30208A319A0001ABAF /* Url.strings in Resources */,
@@ -677,6 +692,7 @@
 				2E5410F8207F942800DB6417 /* MapInteractor.swift in Sources */,
 				2E5410F7207F942800DB6417 /* MapViewController.swift in Sources */,
 				2E5410F5207F942800DB6417 /* MapPresenter.swift in Sources */,
+				2EDC8641209EFAC600821D55 /* MarkerInfoContentsView.swift in Sources */,
 				2E54110320888DB400DB6417 /* HospitalWorker.swift in Sources */,
 				2E5411052088930A00DB6417 /* HospitalAPI.swift in Sources */,
 				2E5410FE207FAA0600DB6417 /* R.generated.swift in Sources */,
