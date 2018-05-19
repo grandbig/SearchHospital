@@ -90,7 +90,7 @@ extension HospitalAPITarget: TargetType {
             return .requestParameters(parameters: [
                 R.string.common.keyFileName(): apiKey,
                 R.string.common.locationKeyName(): "\(lat),\(lng)",
-                R.string.common.radiusKeyName(): 500,
+                R.string.common.radiusKeyName(): 1500,
                 R.string.common.typeKeyName(): R.string.common.hospitalTypeValueName()
                 ], encoding: URLEncoding.default)
         }

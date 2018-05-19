@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Cosmos
 
 class MarkerInfoContentsView: UIView {
 
     // MARK: - IBOutlets
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var ratingLabel: UILabel!
-    @IBOutlet weak private var priceLevelLabel: UILabel!
     @IBOutlet weak private var placeImage: UIImageView!
+    @IBOutlet weak private var ratingView: CosmosView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,10 +34,10 @@ class MarkerInfoContentsView: UIView {
         }
     }
 
-    func setup(name: String, rating: Double, priceLevel: Int) {
+    func setup(name: String, rating: Double) {
         nameLabel.text = name
         ratingLabel.text = String(rating)
-        priceLevelLabel.text = String(priceLevel)
+        ratingView.rating = rating
         placeImage.image = R.image.noImageIcon()
     }
 

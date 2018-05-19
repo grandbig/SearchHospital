@@ -172,7 +172,7 @@ extension MapViewController {
     private func putMarker(place: Map.Search.ViewModel.Place) {
         // 情報ウィンドウの初期化
         let infoWindow = MarkerInfoContentsView(frame: CGRect(x: 0, y: 0, width: 250, height: 265))
-        infoWindow.setup(name: place.name, rating: place.rating ?? 0.0, priceLevel: place.priceLevel ?? 0)
+        infoWindow.setup(name: place.name, rating: place.rating ?? 0.0)
 
         // マーカの初期化
         let marker = CustomGMSMarker()
