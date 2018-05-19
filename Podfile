@@ -13,6 +13,7 @@ target "SearchHospital" do
   pod 'PromiseKit', '~> 6.0'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Cosmos', '~> 16.0'
 
   abstract_target 'Tests' do
     target "SearchHospitalTests"

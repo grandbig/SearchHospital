@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
+  - Cosmos (16.0.0)
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.6)
@@ -34,6 +35,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 16.0)
   - Crashlytics
   - Fabric
   - GoogleMaps
@@ -44,8 +46,25 @@ DEPENDENCIES:
   - R.swift
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cosmos
+    - Crashlytics
+    - Fabric
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - Moya
+    - PromiseKit
+    - R.swift
+    - R.swift.Library
+    - Result
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Cosmos: 7bcee0fa858a9355a214f2a181be5dffcee42c81
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
@@ -58,6 +77,6 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 353d3a7ee84e44170cbb21c86af9f57f83fa2c46
+PODFILE CHECKSUM: e0ca4ffb4573d18bb2a9914e5996879a0a9afe2d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2
